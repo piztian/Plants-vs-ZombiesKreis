@@ -47,30 +47,6 @@ body {
     transition: left 0.5s linear;
 }
 
-/* Balas */
-.bullet {
-    position: absolute;
-    color: #333;
-    z-index: 3;
-    transition: left 0.2s linear;
-}
-
-/* Soles */
-.sun {
-    width: 40px;
-    height: 40px;
-    background-color: #FFD700;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 4;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: #fff;
-}
-
 /* Puntuación */
 .score {
     font-size: 1.5em;
