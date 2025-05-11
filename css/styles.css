@@ -1,24 +1,79 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Plants vs. Zombies MODDED Official</title>
-		<meta property="og:title" content="Play Plants vs Zombies Modded Online" />
-		<meta
-			property="og:description"
-			content="Play Plants vs Zombies Modded here for Free - A tower defense game created by PopCap Games and released on May 5, 2009. Click to Play now! Mod by ROBLNET13 on Github."
-		/>
-		<meta property="og:url" content="https://roblnet13.github.io/pvz/game/iframe.html" />
-		<meta property="og:site_name" content="ROBLNET13" />
-		<meta property="og:image" content="https://roblnet13.github.io/pvz/game/images/gamethumbnail5.png" />
-		<meta property="og:image:alt" content="Plants vs. Zombies MODDED" />
-		<meta property="og:image:type" content="image/png" />
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="theme-color" content="#ff2200" />
-		<meta name="twitter:title" content="Play Plants vs. Zombies Modded Online" />
-		<meta name="twitter:description" content="Play Plants vs. Zombie Modded here for Free - Mod by ROBLNET13 on Github." />
-		<meta name="twitter:image" content="https://roblnet13.github.io/pvz/game/images/gamethumbnail5.png" />
-		<meta http-equiv="refresh" content="0; url=game/iframe.html" />
-	</head>
-</html>
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Diseño de la grilla del juego */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(9, 80px);
+    grid-template-rows: repeat(5, 80px);
+    gap: 5px;
+    margin: 20px auto;
+    position: relative;
+}
+
+/* Celdas del juego */
+.cell {
+    width: 80px;
+    height: 80px;
+    background-color: #ddd;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Plantas */
+.plant {
+    background-color: #8bc34a;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+/* Zombis */
+.zombie {
+    background-color: #ff5722;
+    color: #fff;
+    position: absolute;
+    z-index: 2;
+    transition: left 0.5s linear;
+}
+
+/* Balas */
+.bullet {
+    position: absolute;
+    color: #333;
+    z-index: 3;
+    transition: left 0.2s linear;
+}
+
+/* Soles */
+.sun {
+    width: 40px;
+    height: 40px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 4;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Puntuación */
+.score {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #555;
+}
