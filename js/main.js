@@ -15,13 +15,20 @@ function shootBullet(row, col) {
     setInterval(() => {
         const bullet = document.createElement('span');
         bullet.classList.add('bullet');
-        bullet.innerHTML = '<img src="assets/images/pea.png" alt="Bullet" width="20">';
-        bullet.style.top = `${row * (cellSize + gap) + cellSize / 2 - 10}px`;
+        bullet.innerHTML = '<img src="assets/images/pea.png" alt="Bullet" width="30">';
+        
+        // Ajuste de posición vertical para que las balas estén alineadas
+        bullet.style.top = `${row * (cellSize + gap) + cellSize / 2 - 15}px`;
+        
+        // Ajuste de posición horizontal para que salgan justo del centro de la planta
         bullet.style.left = `${col * (cellSize + gap) + 80}px`;
+        
+        // Añadir al tablero
         gameGrid.appendChild(bullet);
         moveBullet(bullet);
     }, 1000);
 }
+
 
 // Función para mover balas y detectar colisiones
 function moveBullet(bullet) {
